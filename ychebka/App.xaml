@@ -4,26 +4,12 @@
              xmlns:local="clr-namespace:ychebka"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+
         <Style TargetType="ComboBox">
-            <Setter Property="Height" Value="40"/>
-            <Setter Property="FontSize" Value="15"/>
-            <Setter Property="Margin" Value="0 10"/>
-            <Setter Property="Background" Value="White"/>
-            <Setter Property="BorderBrush" Value="Black"/>
-            <Setter Property="BorderThickness" Value="1"/>
-            <Setter Property="Foreground" Value="Gray"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="ComboBox">
-                        <Border CornerRadius="10" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}"
-                            BorderThickness="{TemplateBinding BorderThickness}">
-                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
-                        </Border>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Background" Value="AliceBlue"/>
         </Style>
-        
+
         <!--Работает-->
         
         <Style TargetType="Button">

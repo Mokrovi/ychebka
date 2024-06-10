@@ -5,10 +5,53 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ychebka"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
       Title="PageSuggestion">
 
-    <Grid>
-        
-    </Grid>
+    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+        <Grid MinWidth="800">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.30*"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid Margin="10" DockPanel.Dock="Left" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.1*"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <ComboBox x:Name="clientComboBox" Tag="Клиент" Grid.Row="1"/>
+                <ComboBox x:Name="rieltorComboBox" Tag="Клиент" Grid.Row="2"/>
+                <ComboBox x:Name="estateComboBox" Tag="Клиент" Grid.Row="3"/>
+                <TextBox x:Name="price" Tag="Цена" Grid.Row="4"/>
+                <Button Content="Создать" Grid.Row="6"/>
+                <Button Content="Изменить" Grid.Row="7"/>
+                <Button Content="Удалить" Grid.Row="8"/>
+            </Grid>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.05*"/>
+                    <RowDefinition/>
+                    <RowDefinition Height="0.2*"/>
+                </Grid.RowDefinitions>
+                <ListBox x:Name="listBox" DockPanel.Dock="Top" Grid.Row="1">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding LastName}" Margin="5"/>
+                                <TextBlock Text="{Binding FirstName}" Margin="5"/>
+                                <TextBlock Text="{Binding DealShare}" Margin="5"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                <Button Content="Обновить" Margin="10" Width="120" HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Row="2"/>
+            </Grid>
+        </Grid>
+    </ScrollViewer>
 </Page>

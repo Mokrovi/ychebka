@@ -23,6 +23,8 @@ namespace ychebka
         public PageDeal()
         {
             InitializeComponent();
+            needComboBox.Items.Add("asdasd");
+            needComboBox.Items.Add("g,jhmgasdasd");
         }
     }
 }

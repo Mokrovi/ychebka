@@ -24,5 +24,26 @@ namespace ychebka
         {
             InitializeComponent();
         }
+
+        private void EstateLand(object sender, RoutedEventArgs e)
+        {
+            
+            rooms.Visibility = Visibility.Collapsed;
+            floar.Visibility = Visibility.Collapsed;
+        }
+
+        private void ApartmentCheck(object sender, RoutedEventArgs e)
+        {
+            rooms.Visibility = Visibility.Visible;
+            floar.Visibility = Visibility.Visible;
+            floar.Tag = "Этаж";
+        }
+
+        private void HouseCheck(object sender, RoutedEventArgs e)
+        {
+            rooms.Visibility = Visibility.Visible;
+            floar.Visibility = Visibility.Visible;
+            floar.Tag = "Количество этажей";
+        }
     }
 }

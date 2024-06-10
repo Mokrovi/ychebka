@@ -16,6 +16,44 @@
             <Setter Property="BorderBrush" Value="Gray"/>
             <Setter Property="BorderThickness" Value="1"/>
             <Setter Property="Foreground" Value="Gray"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Grid>
+                            <Border x:Name="border" Background="{TemplateBinding Background}"
+        BorderBrush="{TemplateBinding BorderBrush}"
+        BorderThickness="{TemplateBinding BorderThickness}"
+        CornerRadius="5"/>
+                            <TextBlock x:Name="placeholder" Text="{Binding Tag, RelativeSource={RelativeSource TemplatedParent}}"
+           Foreground="LightGray"
+           Margin="5,0,0,0"
+           VerticalAlignment="Center"
+           IsHitTestVisible="False"
+           Visibility="Collapsed"/>
+                            <ScrollViewer x:Name="PART_ContentHost" VerticalAlignment="Center"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="Text" Value="">
+                                <Setter TargetName="placeholder" Property="Visibility" Value="Visible"/>
+                            </Trigger>
+                            <DataTrigger Binding="{Binding Text, RelativeSource={RelativeSource Self}}" Value="">
+                                <Setter TargetName="placeholder" Property="Visibility" Value="Visible"/>
+                            </DataTrigger>
+                            <Trigger Property="Text" Value="{x:Null}">
+                                <Setter TargetName="placeholder" Property="Visibility" Value="Visible"/>
+                            </Trigger>
+                            <Trigger Property="IsKeyboardFocused" Value="True">
+                                <Setter Property="Foreground" Value="Gray"/>
+                                <Setter TargetName="border" Property="BorderBrush" Value="#A5DCFD"/>
+                            </Trigger>
+                            <Trigger Property="IsKeyboardFocused" Value="False">
+                                <Setter Property="Foreground" Value="Gray"/>
+                                <Setter TargetName="border" Property="BorderBrush" Value="Gray"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
         </Style>
     </Window.Resources>
     
@@ -23,8 +61,9 @@
         <local:Menu/>
         <DockPanel>
             <StackPanel Orientation="Vertical" Margin="20 70 20 20" HorizontalAlignment="Left" Width="250">
-                
-                <TextBox x:Name="SurnameTextBox"  Margin="0 10 0 0"  Tag="Фамилия"  MaxLength="30"/>
+                <local:MyTextBox x:Name="Surname"/>
+                <local:MyTextBox />
+                <TextBox x:Name="SurnameTextBox"  Margin="0 10 0 0"  Tag="Фамиdfsлия" Text="" MaxLength="30"/>
                 <TextBox x:Name="NameTextBox"  Margin="0 10 0 0"  Tag="Имя" MaxLength="15"/>
                 <TextBox x:Name="PatronymicTextBox"  Margin="0 10 0 0"   Tag="Отчество" MaxLength="30"/>
                 <TextBox x:Name="PhoneTextBox" Margin="0 10 0 0"  Tag="Номер телефона" MaxLength="12"/>

@@ -23,37 +23,36 @@ namespace ychebka
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void OpenClient(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new PageClient();
+        }
+
+        private void OpenRieltor(object sender, RoutedEventArgs e)
+        {
             Main.Content = new PageRieltor();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void OpenEstate(object sender, RoutedEventArgs e)
         {
-
+            Main.Content = new PageEstate();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void OpenDeal(object sender, RoutedEventArgs e)
         {
-
+            Main.Content = new PageDeal();
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+        private void OpenSuggestion(object sender, RoutedEventArgs e)
         {
-
+            Main.Content = new PageSuggestion();
         }
 
-        private void Button_Click_3(object sender, RoutedEventArgs e)
+        private void OpenNeed(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void Button_Click_4(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_5(object sender, RoutedEventArgs e)
-        {
-
+            Main.Content = new PageNeed();
         }
     }
 }

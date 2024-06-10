@@ -8,7 +8,7 @@
         Title="Клиент" WindowState="Normal" MinHeight="200" MinWidth="400" WindowStyle="SingleBorderWindow">
     
     <DockPanel LastChildFill="True">
-        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Height="80" Background="#484670">
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" DockPanel.Dock="Top" VerticalScrollBarVisibility="Disabled" Height="80" Background="#484670">
             <StackPanel Orientation="Horizontal">
                 <StackPanel.Resources>
                     <Style TargetType="Button">
@@ -28,12 +28,12 @@
                     </Style>
                 </StackPanel.Resources>
 
-                <Button Content="Клиент" Click="Button_Click"/>
-                <Button Content="Риэлтор" Click="Button_Click_1"/>
-                <Button Content="Объекты недвижимости" Click="Button_Click_2"/>
-                <Button Content="Сделки" Click="Button_Click_3"/>
-                <Button Content="Предложения" Click="Button_Click_4"/>
-                <Button Content="Потребности" Click="Button_Click_5"/>
+                <Button Content="Клиент" Click="OpenClient"/>
+                <Button Content="Риэлтор" Click="OpenRieltor"/>
+                <Button Content="Объекты недвижимости" Click="OpenEstate"/>
+                <Button Content="Сделки" Click="OpenDeal"/>
+                <Button Content="Предложения" Click="OpenSuggestion"/>
+                <Button Content="Потребности" Click="OpenNeed"/>
             </StackPanel>
         </ScrollViewer>
         <Frame x:Name="Main"/>

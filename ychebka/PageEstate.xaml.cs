@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace ychebka
 {
     /// <summary>
-    /// Логика взаимодействия для WindowRieltor.xaml
+    /// Логика взаимодействия для PageEstate.xaml
     /// </summary>
-    public partial class WindowRieltor : Window
+    public partial class PageEstate : Page
     {
-        public WindowRieltor()
+        public PageEstate()
         {
             InitializeComponent();
         }

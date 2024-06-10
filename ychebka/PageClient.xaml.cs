@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace ychebka
 {
     /// <summary>
-    /// Логика взаимодействия для WindowDeal.xaml
+    /// Логика взаимодействия для PageClient.xaml
     /// </summary>
-    public partial class WindowDeal : Window
+    public partial class PageClient : Page
     {
-        public WindowDeal()
+        public PageClient()
         {
             InitializeComponent();
         }

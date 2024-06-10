@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace ychebka
 {
     /// <summary>
-    /// Логика взаимодействия для MyTextBox.xaml
+    /// Логика взаимодействия для WindowRieltor.xaml
     /// </summary>
-    public partial class MyTextBox : UserControl
+    public partial class WindowRieltor : Window
     {
-        public MyTextBox()
+        public WindowRieltor()
         {
             InitializeComponent();
         }

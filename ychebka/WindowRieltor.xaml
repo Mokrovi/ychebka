@@ -7,7 +7,6 @@
         mc:Ignorable="d"
         Title="Риэлтор" WindowState="Normal" MinHeight="200" MinWidth="400" WindowStyle="SingleBorderWindow">
     <DockPanel LastChildFill="True">
-        <local:Menu DockPanel.Dock="Top"/>
         <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
             <Grid MinWidth="800">
                 <Grid.ColumnDefinitions>

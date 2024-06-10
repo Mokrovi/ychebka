@@ -8,58 +8,34 @@
         Title="Клиент" WindowState="Normal" MinHeight="200" MinWidth="400" WindowStyle="SingleBorderWindow">
     
     <DockPanel LastChildFill="True">
-        <local:Menu DockPanel.Dock="Top"/>
-        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
-            <Grid MinWidth="800">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.30*"/>
-                    <ColumnDefinition />
-                </Grid.ColumnDefinitions>
-                <Grid Margin="10" DockPanel.Dock="Left" Grid.Column="0">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="0.1*"></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                    </Grid.RowDefinitions>
-                    <TextBox x:Name="surname" Grid.Row="1" Tag="Фамилия" MaxLength="30"/>
-                    <TextBox x:Name="name" Grid.Row="2" Tag="Имя" MaxLength="15"/>
-                    <TextBox x:Name="patronymic" Grid.Row="3" Tag="Отчество" MaxLength="30"/>
-                    <TextBox x:Name="phone" Grid.Row="4" Tag="Номер телефона" MaxLength="12"/>
-                    <TextBox x:Name="email" Grid.Row="5" Tag="Почта" MaxLength="40"/>
-                    <Button Content="Создать" Grid.Row="7" />
-                    <Button Content="Изменить" Grid.Row="8" />
-                    <Button Content="Удалить" Grid.Row="9" />
-                </Grid>
-                <Grid Grid.Column="1">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="0.05*"/>
-                        <RowDefinition/>
-                        <RowDefinition Height="0.2*"/>
-                    </Grid.RowDefinitions>
-                    <ListBox x:Name="listBox" DockPanel.Dock="Top" Grid.Row="1">
-                        <ListBox.ItemTemplate>
-                            <DataTemplate>
-                                <StackPanel Orientation="Horizontal">
-                                    <TextBlock Text="{Binding LastName}" Margin="5"/>
-                                    <TextBlock Text="{Binding FirstName}" Margin="5"/>
-                                    <TextBlock Text="{Binding MiddleName}" Margin="5"/>
-                                    <TextBlock Text="{Binding Phone}" Margin="5"/>
-                                    <TextBlock Text="{Binding Email}" Margin="5"/>
-                                </StackPanel>
-                            </DataTemplate>
-                        </ListBox.ItemTemplate>
-                    </ListBox>
-                    <Button Content="Обновить"  Width="120" HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Row="2"/>
-                </Grid>
-            </Grid>
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Height="80" Background="#484670">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel.Resources>
+                    <Style TargetType="Button">
+                        <Setter Property="Margin" Value="15"/>
+                        <Setter Property="FontSize" Value="15"/>
+                        <Setter Property="Width" Value="200"/>
+                        <Setter Property="Background" Value="#c0b1ff"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border CornerRadius="10" Background="{TemplateBinding Background}">
+                                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </StackPanel.Resources>
+
+                <Button Content="Клиент" Click="Button_Click"/>
+                <Button Content="Риэлтор" Click="Button_Click_1"/>
+                <Button Content="Объекты недвижимости" Click="Button_Click_2"/>
+                <Button Content="Сделки" Click="Button_Click_3"/>
+                <Button Content="Предложения" Click="Button_Click_4"/>
+                <Button Content="Потребности" Click="Button_Click_5"/>
+            </StackPanel>
         </ScrollViewer>
+        <Frame x:Name="Main"/>
     </DockPanel>
 </Window>

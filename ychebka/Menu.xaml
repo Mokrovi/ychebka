@@ -6,35 +6,5 @@
              xmlns:local="clr-namespace:ychebka"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="1800">
-    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Height="80" Background="#484670">
-        <StackPanel Orientation="Horizontal">
-            <StackPanel.Resources>
-                <Style TargetType="Button">
-                    <Setter Property="Margin" Value="15"/>
-                    <Setter Property="FontSize" Value="15"/>
-                    <Setter Property="Width" Value="200"/>
-                    <Setter Property="Background" Value="#c0b1ff"/>
-                    <Setter Property="Template">
-                        <Setter.Value>
-                            <ControlTemplate TargetType="Button">
-                                <Border CornerRadius="10"
-                        Background="{TemplateBinding Background}">
-
-                                    <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                      VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Setter.Value>
-                    </Setter>
-                </Style>
-            </StackPanel.Resources>
-
-            <Button Content="Клиент" Click="Button_Click"/>
-            <Button Content="Риэлтор" Click="Button_Click_1"/>
-            <Button Content="Объекты недвижимости" Click="Button_Click_2"/>
-            <Button Content="Сделки" Click="Button_Click_3"/>
-            <Button Content="Предложения" Click="Button_Click_4"/>
-            <Button Content="Потребности" Click="Button_Click_5"/>
-        </StackPanel>
-    </ScrollViewer>
+    
 </UserControl>

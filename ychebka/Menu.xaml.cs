@@ -27,12 +27,14 @@ namespace ychebka
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("hach");
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
+            WindowRieltor rieltor = new WindowRieltor();
+            rieltor.Show();
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
@@ -42,7 +44,8 @@ namespace ychebka
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-
+            WindowDeal windowDeal = new WindowDeal();
+            windowDeal.Show();
         }
 
         private void Button_Click_4(object sender, RoutedEventArgs e)

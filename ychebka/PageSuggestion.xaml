@@ -26,8 +26,8 @@
                     <RowDefinition></RowDefinition>
                 </Grid.RowDefinitions>
                 <ComboBox x:Name="clientComboBox" Tag="Клиент" Grid.Row="1"/>
-                <ComboBox x:Name="rieltorComboBox" Tag="Клиент" Grid.Row="2"/>
-                <ComboBox x:Name="estateComboBox" Tag="Клиент" Grid.Row="3"/>
+                <ComboBox x:Name="rieltorComboBox" Tag="Риэлтор" Grid.Row="2"/>
+                <ComboBox x:Name="estateComboBox" Tag="Недвижемость" Grid.Row="3"/>
                 <TextBox x:Name="price" Tag="Цена" Grid.Row="4"/>
                 <Button Content="Создать" Grid.Row="6"/>
                 <Button Content="Изменить" Grid.Row="7"/>

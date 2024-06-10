@@ -21,9 +21,7 @@
             </Grid.ColumnDefinitions>
             <Grid x:Name="grid" Margin="10" DockPanel.Dock="Left" Grid.Column="0">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="0.1*"></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="0.1*"></RowDefinition>                    
                     <RowDefinition></RowDefinition>
                     <RowDefinition></RowDefinition>
                     <RowDefinition></RowDefinition>
@@ -37,7 +35,7 @@
                 </Grid.RowDefinitions>
 
                 <ComboBox x:Name="clientComboBox" Tag="Клиент" Grid.Row="1"/>
-                <ComboBox x:Name="rieltorComboBox" Tag="Клиент" Grid.Row="2"/>                
+                <ComboBox x:Name="rieltorComboBox" Tag="Риэлтор" Grid.Row="2"/>                
                 <StackPanel Grid.Row="3" Margin="10">
                     <RadioButton x:Name="apatmentCheck" IsChecked="True" >
                         <TextBlock Text="Квартира"/>
@@ -49,13 +47,13 @@
                         <TextBlock Text="Земля"/>
                     </RadioButton>
                 </StackPanel>
-                <TextBox x:Name="adress" Tag="Адресс" Grid.Row="6" />
-                <TextBox x:Name="priceMin" Tag="Минимальная цена" Grid.Row="7" />
-                <TextBox x:Name="priceMax" Tag="Максимальная цена" Grid.Row="8"/>
-
-                <Button Content="Создать" Grid.Row="10"/>
-                <Button Content="Изменить" Grid.Row="11"/>
-                <Button Content="Удалить" Grid.Row="12"/>
+                <TextBox x:Name="adress" Tag="Адресс" Grid.Row="4" />
+                <TextBox x:Name="priceMin" Tag="Минимальная цена" Grid.Row="5" />
+                <TextBox x:Name="priceMax" Tag="Максимальная цена" Grid.Row="6"/>
+                
+                <Button Content="Создать" Grid.Row="8"/>
+                <Button Content="Изменить" Grid.Row="9"/>
+                <Button Content="Удалить" Grid.Row="10"/>
             </Grid>
             <Grid Grid.Column="1">
                 <Grid.RowDefinitions>

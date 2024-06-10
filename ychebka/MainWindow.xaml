@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ychebka"
         mc:Ignorable="d"
-        Title="Клиент" WindowState="Normal" MinHeight="200" MinWidth="400" WindowStyle="SingleBorderWindow">
+        Title="Окно -_-" WindowState="Normal" x:Name="wind" MinHeight="200" MinWidth="400" WindowStyle="SingleBorderWindow">
     
     <DockPanel LastChildFill="True">
         <ScrollViewer HorizontalScrollBarVisibility="Auto" DockPanel.Dock="Top" VerticalScrollBarVisibility="Disabled" Height="80" Background="#484670">

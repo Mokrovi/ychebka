@@ -5,16 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ychebka"
         mc:Ignorable="d"
-        Title="Окно -_-" WindowState="Normal" x:Name="wind" MinHeight="200" MinWidth="400" WindowStyle="SingleBorderWindow">
+        Title="Окно -_-" WindowState="Normal" x:Name="wind" MinHeight="400" MinWidth="600" WindowStyle="SingleBorderWindow">
     
-    <DockPanel LastChildFill="True">
-        <ScrollViewer HorizontalScrollBarVisibility="Auto" DockPanel.Dock="Top" VerticalScrollBarVisibility="Disabled" Height="80" Background="#484670">
-            <StackPanel Orientation="Horizontal">
-                <StackPanel.Resources>
+    <DockPanel LastChildFill="True" Background="AliceBlue">
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" DockPanel.Dock="Top" VerticalScrollBarVisibility="Disabled" MinHeight="80" Background="#484670">
+            <UniformGrid Columns ="6">
+                <UniformGrid.Resources>
                     <Style TargetType="Button">
                         <Setter Property="Margin" Value="15"/>
                         <Setter Property="FontSize" Value="15"/>
-                        <Setter Property="Width" Value="200"/>
+                        <Setter Property="MinWidth" Value="120"/>
+                        <Setter Property="MaxWidth" Value="250"/>
                         <Setter Property="Background" Value="#c0b1ff"/>
                         <Setter Property="Template">
                             <Setter.Value>
@@ -26,16 +27,15 @@
                             </Setter.Value>
                         </Setter>
                     </Style>
-                </StackPanel.Resources>
-
-                <Button Content="Клиент" Click="OpenClient"/>
-                <Button Content="Риэлтор" Click="OpenRieltor"/>
-                <Button Content="Объекты недвижимости" Click="OpenEstate"/>
-                <Button Content="Сделки" Click="OpenDeal"/>
-                <Button Content="Предложения" Click="OpenSuggestion"/>
-                <Button Content="Потребности" Click="OpenNeed"/>
-            </StackPanel>
+                </UniformGrid.Resources>
+                <Button Content="Клиент" Click="OpenClient" Grid.Column="0"/>
+                <Button Content="Риэлтор" Click="OpenRieltor" Grid.Column="1"/>
+                <Button Content="Объекты недвижимости" Click="OpenEstate" Grid.Column="2"/>
+                <Button Content="Сделки" Click="OpenDeal" Grid.Column="3"/>
+                <Button Content="Предложения" Click="OpenSuggestion" Grid.Column="4"/>
+                <Button Content="Потребности" Click="OpenNeed" Grid.Column="5"/>
+            </UniformGrid>
         </ScrollViewer>
-        <Frame x:Name="Main"/>
+        <Frame x:Name="Main" />
     </DockPanel>
 </Window>

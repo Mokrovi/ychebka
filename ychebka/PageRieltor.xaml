@@ -41,17 +41,9 @@
                     <RowDefinition/>
                     <RowDefinition Height="0.2*"/>
                 </Grid.RowDefinitions>
-                <ListBox x:Name="listBox" DockPanel.Dock="Top" Grid.Row="1">
-                    <ListBox.ItemTemplate>
-                        <DataTemplate>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="{Binding LastName}" Margin="5"/>
-                                <TextBlock Text="{Binding FirstName}" Margin="5"/>
-                                <TextBlock Text="{Binding DealShare}" Margin="5"/>
-                            </StackPanel>
-                        </DataTemplate>
-                    </ListBox.ItemTemplate>
-                </ListBox>
+                <ListView x:Name="listBox" Grid.Row="1">
+                 
+                </ListView>
                 <Button Content="Обновить"  Width="120" HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Row="2"/>
             </Grid>
         </Grid>
